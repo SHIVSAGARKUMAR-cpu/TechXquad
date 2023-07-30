@@ -1,6 +1,21 @@
-app.controller("AppController", function ($scope, AppService) {
+app.controller("AppController", ['$scope', function ($scope, AppService) {
 
 
+    // Tyeped JS start
+        var options = {
+        strings: ["Web Development", "App Development", "Digital Marketing", "Graphics Designing"],
+        typeSpeed: 50,
+        loop: true
+    };
+
+    var typed = new Typed('.typing-element', options);
+    // Typed JS end
+
+
+
+    
+
+    // Service Enquiry form controller start
     $scope.Service = "Select A Service";
 
     $scope.showModal = false;
@@ -38,13 +53,36 @@ app.controller("AppController", function ($scope, AppService) {
         console.log(obj);
     }
 
-//    let typed =  new Typed('.typed', {
-//         strings: ['First Sentence', 'Second Sentence'],
-//         loop: true,
-//         typeSpeed: 100,
-//         backSpeed: 50,
-//         backDelay: 2000
-//     });
-    
-  
-});
+
+     // Service Enquiry form controller end
+
+
+     // Testimonial carousel start
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        dots: true,
+        loop: true,
+        center: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+
+    // Testimonial carousel end
+
+
+
+
+}]);

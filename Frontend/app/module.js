@@ -1,4 +1,4 @@
-let app = angular.module("codesquad", ["ngRoute"]);
+let app = angular.module("techxquad", ["ngRoute"]);
 
 app.config(function ($routeProvider) {
   $routeProvider
