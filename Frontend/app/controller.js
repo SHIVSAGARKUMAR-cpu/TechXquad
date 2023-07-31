@@ -4,7 +4,7 @@ app.controller("AppController", ['$scope', function ($scope, AppService) {
     // Tyeped JS start
         var options = {
         strings: ["Web Development", "App Development", "Digital Marketing", "Graphics Designing"],
-        typeSpeed: 50,
+        typeSpeed: 150,
         loop: true
     };
 

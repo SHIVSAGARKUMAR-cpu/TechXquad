@@ -128,6 +128,61 @@
 })(jQuery);
 
 $(document).ready(function () {
+
+
+
+    var currentUrl = window.location.href;
+
+
+    if (currentUrl.indexOf('/') !== -1) {
+        $("#about , #services , #blog , #contact , #career ").removeClass("active");
+        $("#home").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/about') !== -1) {
+        $("#home , #services , #blog , #contact , #career ").removeClass("active");
+        $("#about").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/blog') !== -1) {
+        $("#home , #about , #services , #contact , #career ").removeClass("active");
+        $("#blog").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/contact') !== -1) {
+        $("#home , #about , #services , #blog , #career ").removeClass("active");
+        $("#contact").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/career') !== -1) {
+        $("#home , #about , #services , #blog , #contact ").removeClass("active");
+        $("#career").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/services/web-development') !== -1) {
+        $("#home, #about, #blog , #career, #contact").removeClass("active");
+        $("#services").addClass("active");
+    }
+    
+    if (currentUrl.indexOf('/services/app-development') !== -1) {
+        $("#home, #about, #blog , #career, #contact").removeClass("active");
+        $("#services").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/services/digital-marketing') !== -1) {
+        $("#home, #about, #blog , #career, #contact").removeClass("active");
+        $("#services").addClass("active");
+    }
+
+    if (currentUrl.indexOf('/services/graphics-designing') !== -1) {
+        $("#home, #about, #blog , #career, #contact").removeClass("active");
+        $("#services").addClass("active");
+    }
+
+
+
+
+
     $("#home").click(function () {
         $("#about , #services , #blog , #contact , #career ").removeClass("active");
         $("#home").addClass("active");
@@ -141,6 +196,7 @@ $(document).ready(function () {
         $("#home , #about , #services , #contact , #career ").removeClass("active");
         $("#blog").addClass("active");
     });
+
     $("#contact").click(function () {
         $("#home , #about , #services , #blog , #career ").removeClass("active");
         $("#contact").addClass("active");
@@ -149,7 +205,7 @@ $(document).ready(function () {
         $("#home , #about , #services , #blog , #contact ").removeClass("active");
         $("#career").addClass("active");
     });
-    $("#web-dev, #app-dev , #digi-marketing, #graphics-designing").click(function(){
+    $("#web-dev, #app-dev , #digi-marketing, #graphics-designing").click(function () {
         $("#home, #about, #blog , #career, #contact").removeClass("active");
         $("#services").addClass("active");
     });
